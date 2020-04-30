@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/BuiltItBigger.iml" filepath="$PROJECT_DIR$/BuiltItBigger.iml" group="BuiltItBigger" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="BuiltItBigger/app" />
       <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" group="BuiltItBigger/backend" />
+      <module fileurl="file://$PROJECT_DIR$/jokelib/jokelib.iml" filepath="$PROJECT_DIR$/jokelib/jokelib.iml" group="BuiltItBigger/jokelib" />
     </modules>
   </component>
 </project>
