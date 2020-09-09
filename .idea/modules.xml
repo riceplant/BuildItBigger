@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BuiltItBigger.iml" filepath="$PROJECT_DIR$/BuiltItBigger.iml" group="BuiltItBigger" />
-      <module fileurl="file://$PROJECT_DIR$/androidlibrary/androidlibrary.iml" filepath="$PROJECT_DIR$/androidlibrary/androidlibrary.iml" group="BuiltItBigger/androidlibrary" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="BuiltItBigger/app" />
-      <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" group="BuiltItBigger/backend" />
-      <module fileurl="file://$PROJECT_DIR$/jokelib/jokelib.iml" filepath="$PROJECT_DIR$/jokelib/jokelib.iml" group="BuiltItBigger/jokelib" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BuildItBigger.iml" filepath="$PROJECT_DIR$/.idea/modules/BuildItBigger.iml" group="BuildItBigger" />
+      <module fileurl="file://$PROJECT_DIR$/androidlibrary/androidlibrary.iml" filepath="$PROJECT_DIR$/androidlibrary/androidlibrary.iml" group="BuildItBigger/androidlibrary" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="BuildItBigger/app" />
+      <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" group="BuildItBigger/backend" />
+      <module fileurl="file://$PROJECT_DIR$/jokelib/jokelib.iml" filepath="$PROJECT_DIR$/jokelib/jokelib.iml" group="BuildItBigger/jokelib" />
     </modules>
   </component>
 </project>
