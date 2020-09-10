@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 public class JokeActivity extends AppCompatActivity {
 
+    // Disclaiimer https://github.com/fjoglar/build-it-bigger
+
     @NonNull
     private static final String EXTRA_JOKE = "joke";
 
@@ -20,20 +22,18 @@ public class JokeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke);
 
-        TextView textViewJoke = findViewById(R.id.textview_joke);
+        TextView jokeTextView = findViewById(R.id.textview_joke);
 
         Intent intent = getIntent();
         String joke = intent.getStringExtra(EXTRA_JOKE);
 
         if (joke == null || joke.isEmpty()) {
-            textViewJoke.setText(R.string.joke_not_found);
+            jokeTextView.setText(R.string.joke_not_found);
         } else {
-            textViewJoke.setText(joke);
+            jokeTextView.setText(joke);
         }
 
         ActionBar actionBar = this.getSupportActionBar();
-
-        // Set the action bar back button to look like an up button
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
