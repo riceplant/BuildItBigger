@@ -39,6 +39,12 @@ public class JokeActivity extends AppCompatActivity {
         }
     }
 
+    public static Intent jokeIntent(Context context, String joke) {
+        Intent intent = new Intent(context, JokeActivity.class);
+        intent.putExtra(EXTRA_JOKE, joke);
+        return intent;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -47,9 +53,4 @@ public class JokeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static Intent jokeScreenIntent(Context context, String joke) {
-        Intent intent = new Intent(context, JokeActivity.class);
-        intent.putExtra(EXTRA_JOKE, joke);
-        return intent;
-    }
 }

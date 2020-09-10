@@ -28,8 +28,9 @@ import static org.junit.Assert.assertThat;
 @RunWith(AndroidJUnit4.class)
 public class EndpointAsyncTaskTest {
 
+    // disclaimer: https://github.com/fjoglar/build-it-bigger
     @Test
-    public void asyncTaskDoesNotReturnNullOrEmptyString() throws Exception {
+    public void async_task_returns_joke() throws Exception {
         final MainActivityFragment mainActivityFragment = new MainActivityFragment();
         mainActivityFragment.setTesting();
 

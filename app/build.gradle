@@ -32,16 +32,17 @@ android {
         }
     }
 
-    flavorDimensions "all"
+    flavorDimensions "app"
 
     productFlavors {
         free {
-            dimension "all"
+            dimension "app"
             applicationIdSuffix ".free"
         }
 
         paid {
-            dimension "all"
+            dimension "app"
+            applicationIdSuffix ".paid"
         }
     }
 }
