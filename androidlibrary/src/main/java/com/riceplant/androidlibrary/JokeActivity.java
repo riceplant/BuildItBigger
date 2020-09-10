@@ -1,6 +1,10 @@
 package com.riceplant.androidlibrary;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,36 +12,44 @@ import android.widget.TextView;
 
 public class JokeActivity extends AppCompatActivity {
 
-    public final static String INTENT_JOKE = "INTENT_JOKE";
+    @NonNull
+    private static final String EXTRA_JOKE = "joke";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joke);
-        // Processing the joke intent
-        String joke = getIntent().getStringExtra(INTENT_JOKE);
-        TextView textViewJoke = (TextView) findViewById(R.id.textview_joke);
-        textViewJoke.setText(joke);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        TextView textViewJoke = findViewById(R.id.textview_joke);
+
+        Intent intent = getIntent();
+        String joke = intent.getStringExtra(EXTRA_JOKE);
+
+        if (joke == null || joke.isEmpty()) {
+            textViewJoke.setText(R.string.joke_not_found);
+        } else {
+            textViewJoke.setText(joke);
+        }
+
+        ActionBar actionBar = this.getSupportActionBar();
+
+        // Set the action bar back button to look like an up button
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    public static Intent jokeScreenIntent(Context context, String joke) {
+        Intent intent = new Intent(context, JokeActivity.class);
+        intent.putExtra(EXTRA_JOKE, joke);
+        return intent;
     }
 }

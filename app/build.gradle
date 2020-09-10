@@ -31,6 +31,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "all"
+
+    productFlavors {
+        free {
+            dimension "all"
+            applicationIdSuffix ".free"
+        }
+
+        paid {
+            dimension "all"
+        }
+    }
 }
 
 dependencies {
@@ -41,8 +54,14 @@ dependencies {
     implementation 'com.google.api-client:google-api-client:1.23.0'
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.1'
+
     implementation project(":jokelib")
     implementation project(":androidlibrary")
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
